@@ -1,0 +1,202 @@
+/* ——— Fonts (adds serif just for headings; safe) ——— */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Source+Serif+4:wght@700&display=swap');
+
+:root {
+  --accent: #155e36;       /* finance dark green */
+  --accent-ink: #0e4226;   /* hover/active */
+  --border: #e9eef5;
+  --ink: #0f172a;
+}
+
+/* Navbar */
+.nav {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+  padding: 12px 20px;
+  font-weight: 600;
+}
+.brand { max-width: 1100px; margin: 0 auto; }
+
+/* Hero */
+.hero {
+  padding: 48px 20px;
+  background: linear-gradient(180deg, #fff, #f8fafd);
+}
+.hero-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 28px;
+  align-items: center;
+}
+.hero h1 { 
+  font-size: 40px; 
+  margin: 0 0 8px; 
+  font-family: "Source Serif 4", Georgia, serif; /* NEW: serif headings only */
+  color: var(--ink);
+}
+.accent { color: var(--accent); }
+.hero p { color: #475569; margin: 0 0 18px; }
+.headshot {
+  width: 240px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+  justify-self: end;
+}
+.row { display: flex; gap: 12px; }
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--accent), #0a2d1b);
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: background .15s ease, transform .05s ease, box-shadow .15s ease;
+}
+.btn:hover {
+  background: linear-gradient(135deg, var(--accent-ink), #061e12);
+  box-shadow: 0 6px 16px rgba(21,94,54,0.25);
+}
+.btn:active { transform: translateY(1px); }
+.btn:focus-visible {
+  outline: 2px solid var(--accent-ink);
+  outline-offset: 2px;
+}
+
+/* Ghost button */
+.btn.ghost {
+  background: #edf7f1;
+  color: var(--accent);
+  border: 1px solid #cbe3d5;
+}
+.btn.ghost:hover {
+  background: #dcefe3;
+  box-shadow: 0 6px 16px rgba(14,66,38,0.15);
+}
+.btn.ghost:active { transform: translateY(1px); }
+.btn.ghost:focus-visible {
+  outline: 2px solid var(--accent-ink);
+  outline-offset: 2px;
+}
+
+/* Sections */
+.section { padding: 48px 20px; }
+.wrap { max-width: 1200px; margin: 0 auto; }
+h2 { 
+  margin: 0 0 12px; 
+  font-family: "Source Serif 4", Georgia, serif; /* NEW */
+  color: var(--ink);
+}
+h3, h4 { font-family: "Source Serif 4", Georgia, serif; color: var(--ink); }
+
+/* Cards / Grid */
+.grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 18px; }
+.card {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: #fff;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.muted { color: #6b7280; margin: 0 0 6px; }
+.thumbBox {
+  width: 100%;
+  aspect-ratio: 9/8;
+  background: #0f1115;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 1px solid #121826;
+}
+.thumbBox img { max-width: 100%; max-height: 100%; object-fit: contain; }
+
+.card img {
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.card img:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+/* Table (Tesco Ratings) */
+.ratings { width: 100%; border-collapse: collapse; margin: 12px 0 20px; }
+.ratings th, .ratings td { border: 1px solid var(--border); padding: 8px 12px; text-align: left; }
+.ratings th { background: #f8fafd; }
+
+/* Article typography */
+.prose h3 { margin: 24px 0 8px; font-size: 22px; }
+.prose h4 { margin: 18px 0 6px; font-size: 18px; }
+.prose p { margin: 10px 0; color: #1f2937; line-height: 1.6; }
+.prose ul { margin: 10px 0 10px 18px; color: #1f2937; }
+.prose figure { margin: 18px 0; }
+.prose figcaption { font-size: 14px; color: #6b7280; margin-top: 6px; }
+.prose { max-width: 760px; line-height: 1.65; font-size: 17px; }
+
+/* CV block */
+.cv { background: #f8fafd; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.cv-grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 28px; margin-top: 12px; }
+.cv-col { background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 16px 18px; }
+.cv h3 { margin: 8px 0 10px; font-size: 18px; }
+.cv-list { margin: 0 0 12px; padding-left: 18px; }
+.cv-list li { margin: 6px 0; color: #374151; }
+.cv-actions { margin-top: 16px; }
+
+/* Mobile */
+@media (max-width:880px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .headshot { justify-self: start; }
+  .grid { grid-template-columns: 1fr; }
+  .cv-grid { grid-template-columns: 1fr; }
+}
+
+/* --- Chart sizing helpers (existing) --- */
+.card img.chart-lg { width: 100%; }
+.prose img.chart-tight { 
+  width: min(82%, 820px);
+  display: block; 
+  margin: 0 auto;
+}
+@media (max-width: 880px){
+  .prose img.chart-tight { width: 100%; }
+}
+
+/* Charts fill the card edge-to-edge */
+.card.flush{
+  padding:0;
+  overflow:hidden;
+}
+.card.flush img{
+  display:block;
+  width:100%;
+  height:auto;
+  border-radius:0;
+}
+
+/* ——— NEW: optional consistent chart frame (use if you wrap images) ——— */
+.chartFrame{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow:0 8px 24px rgba(0,0,0,0.06);
+}
+.chartInner{padding:10px;display:flex;align-items:center;justify-content:center}
+.chartInner img{max-width:100%;height:auto;object-fit:contain}
+.caption{font-size:13px;color:#6b7280;padding:8px 12px;border-top:1px solid var(--border)}
+
+/* ——— NEW: micro-animations hook (only active if you add .fade-in in JSX) ——— */
+.fade-in{opacity:0;transform:translateY(8px);transition:opacity .45s ease, transform .45s ease}
+.fade-in.visible{opacity:1;transform:none}
+
+
+

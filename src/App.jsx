@@ -75,7 +75,7 @@ function Projects() {
       d:'Analysed Tesco’s credit profile across leverage, interest coverage and bond maturities. Findings show improving resilience, proactive debt management and the potential for an S&P upgrade.',
       img:tescoThumb, link:'/projects/tesco' },
     { t:'Bitcoin vs Gold',
-      d:'Applied Project, Imperial MSc Investment and Wealth Management: “Is Bitcoin a better inflation hedge than gold?” Using regression analysis and rolling betas around the January 2024 spot ETF approval, I found evidence that Bitcoin’s sensitivity to inflation expectations is rising, though it remains volatile and asymmetric. Gold continues to serve as the anchor hedge, while Bitcoin may offer value as a tactical complement.',
+      d:'Applied Project (Imperial MSc): “Is Bitcoin a better inflation hedge than gold?” Regression and rolling beta analysis post-ETF approval show Bitcoin’s inflation sensitivity rising but volatile, while gold remains the anchor hedge and Bitcoin a tactical complement.',
       img:btcThumb, link:'/projects/btc-gold' },
     { t:'AI Critical Thinking App',
       d:'To encourage the use of AI to hone critical thinking skills rather than replace them.',

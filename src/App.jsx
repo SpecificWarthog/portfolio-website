@@ -69,7 +69,7 @@ function Hero() {
 function Projects() {
   const items = [
     { t:'Croda Stock Pitch',
-      d:'Croda International (LSE:CRDA) is a specialty ingredients supplier in health, beauty and agriculture. Despite cyclical headwinds, its core Life Sciences and Consumer Care segments deliver high returns and are gaining share. With shares down ~26% YTD and a clear structural tilt toward higher-margin businesses, Croda offers an attractive entry point into a resilient cash-generative compounder.',
+      d:'Croda International (LSE:CRDA), a specialty ingredients supplier in health, beauty and agriculture, offers a resilient entry point as its high-return Life Sciences and Consumer Care segments expand despite cyclical headwinds.',
       img:crodaThumb, link:'/projects/croda' },
     { t:'Tesco Credit Analysis',
       d:'Analysed Tesco’s credit profile across leverage, interest coverage and bond maturities. Findings show improving resilience, proactive debt management and the potential for an S&P upgrade.',
